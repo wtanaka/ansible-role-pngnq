@@ -17,3 +17,8 @@ after_failure:
 - cat role-tester-ansible-master/.kitchen/logs/*.log | grep -v '^I, '
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  slack:
+    on_success: change
+    on_failure: change
+    rooms:
+      - secure: "CH14ZunXxEkuh02wqa2Q6+cIScO0OnjvsQxGeTj0rlXXAhfk4uPFT2ZM6yTJxwcuwa2m+zPA1jNdc2AgU1OlRZSQANRET/1qmcpqAccoNveAE1UNZXv9kYO1yKtDCWrFxixdqQ+dqxjmVdW8oF2QK6a2IPjT6O1YHJfNwQYkjm0chOg5X85jJflTLWzd6TPizr2W/gej9xQ0RVdojfSxaE1uWrhRS26ZO0oavKBAOZpKpFz1+sdk4OKSciCXPEDKnSl/yZM/3vyQ5vzUhcI1F2AGOIS1BAdWzuRJal4civXLtDXB2Gpy5hJR6oEX04K3+Z0wtNEPzSmKm7l1uDTcoW9NUbmnDg0N3MN6s/wxQPNY5z/WrVWbK/y1CihkRO4bU28ONhlo6YxU7psbEw6GAg6eihb7/qQmBBiN5/yC+Ol1EePaeWgG2Ixt17CYVp5PocEOxSQDurvP9mZ3ZsaJaogrvGuJbB5QP6FDqCjg/a8ku/t4IY2zvR/5iMoNAV2cjd4LWr3jqFR115i76Spo/qsDPQVdd2AMexTwq85mpLtRGMzNZn0rmmopVzHXhlk51z56smYZx4/Iwkj3H3V/kyetecJhBB9fv5pIPER5jaPjNVJopt2Bct5YlOyb5vVIvvb9LKuB9R4K1o+Bxl1KMeS89MBhFke6FvjcZxhIMWQ="
